@@ -120,7 +120,7 @@ const Contacts = () => {
 
 
   return (
-    <Container className="mt-4">
+    <Container className="mt-4 mb-10">
       {
         isLoggedIn ? (
           <Jumbotron style={{ backgroundColor: 'white' }} >
