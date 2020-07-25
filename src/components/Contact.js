@@ -121,10 +121,12 @@ const Contact = ({ contact, contactKey }) => {
             onClick={() => deleteContact()}
             color="danger"
             className="text-danger icon"
+            style={{ cursor: 'pointer' }}
           />
           <MdEdit
             className="icon text-info ml-2"
             onClick={() => updateContact()}
+            style={{ cursor: 'pointer' }}
           />
         </Col>
       </Row>

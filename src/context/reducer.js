@@ -5,7 +5,8 @@ import {
   SET_LOADING,
   CONTACT_TO_UPDATE,
   SET_SINGLE_CONTACT,
-  SET_CURRENT_USER
+  SET_CURRENT_USER,
+  SET_IS_LOGGEDIN
 } from "./action.types";
 
 //TODO: DONE use switch case
@@ -30,6 +31,8 @@ export default (state, action) => {
         ...state,
         contact: action.payload
       }
+    case SET_IS_LOGGEDIN:
+      return { ...state, isLoggedIn: action.payload }
 
 
     default:
