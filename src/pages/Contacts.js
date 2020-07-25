@@ -120,7 +120,7 @@ const Contacts = () => {
 
 
   return (
-    <Container className="mt-4 mb-10">
+    <Container className="mt-4">
       {
         isLoggedIn ? (
           <Jumbotron style={{ backgroundColor: 'white' }} >
@@ -145,7 +145,7 @@ const Contacts = () => {
         contacts.length === 0 && !isLoading && isLoggedIn ? (
           <div className="Center text-large text-primary">NO Contacts found</div>
         ) : (
-            <ListGroup>
+            <ListGroup style={{ marginBottom: '100px' }}>
               {Object.entries(contacts).map(([key, value]) => (
                 <ListGroupItem key={key}>
                   <Contact contact={value} contactKey={key} />
