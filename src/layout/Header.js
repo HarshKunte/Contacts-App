@@ -9,7 +9,7 @@ import 'firebase/auth'
 import { ContactContext } from "../context/Context";
 
 import { SET_IS_LOGGEDIN, SET_CURRENT_USER } from "../context/action.types";
-
+import { Redirect } from 'react-router-dom'
 const Header = () => {
   const { state, dispatch } = useContext(ContactContext);
   const { isLoggedIn } = state;
@@ -27,7 +27,10 @@ const Header = () => {
       toast("Signed out successfully!!", {
         type: 'success'
       })
+      return <Redirect to='/' />
     })
+
+
   }
   return (
     <Navbar color="info" light>
